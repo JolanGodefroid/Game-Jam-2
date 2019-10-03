@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 493688744203989557}
   - component: {fileID: 3094573963931916724}
   - component: {fileID: 1314961056200082677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseCamera_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,8 @@ GameObject:
   - component: {fileID: 1458268031232383006}
   - component: {fileID: 5764132686627427651}
   - component: {fileID: 8832596760984384080}
-  m_Layer: 0
+  - component: {fileID: 65878035373392734}
+  m_Layer: 8
   m_Name: SM_Camera_LeftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,3 +173,16 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!65 &65878035373392734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010869623274136390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 44.36265, y: 20.05372, z: 12.017512}
+  m_Center: {x: 22.075407, y: 0.011294365, z: -0.0008382797}

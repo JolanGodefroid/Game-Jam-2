@@ -6,11 +6,11 @@ using UnityEngine.Rendering.PostProcessing;
 public class LevelManager : MonoBehaviour
 {
 	public PostProcessProfile profile;
-	public GameObject[] LevelsPrefabs;
+	public GameObject[] LevelsPrefabs = new GameObject[5];
 	public Transform Player;
 
-	private GameObject[] Levels = new GameObject[3];
-	private Transform[] Checkpoints = new Transform[3];
+	private GameObject[] Levels = new GameObject[5];
+	private Transform[] Checkpoints = new Transform[5];
 	private int currentLevel = 0;
 	private ColorGrading colorGrading;
 
@@ -33,10 +33,10 @@ public class LevelManager : MonoBehaviour
 		{
 			Levels[i] = Instantiate(LevelsPrefabs[i], new Vector3(0f, 0f, i * 100f), Quaternion.identity);
 			Checkpoints[i] = Levels[i].transform.GetChild(0).transform;
-
-			Player.position = Checkpoints[currentLevel].position;
-			Player.rotation = Checkpoints[currentLevel].rotation;
 		}
+
+		Player.position = Checkpoints[currentLevel].position;
+		Player.rotation = Checkpoints[currentLevel].rotation;
 
 		EnableDisableLevels();
 	}
