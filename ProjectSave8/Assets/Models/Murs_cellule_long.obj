@@ -1,0 +1,20 @@
+# This file uses meters as units for non-parametric coordinates.
+
+mtllib Murs_cellule_long.mtl
+g default
+v 0.000017 403.101798 -0.000061
+v 0.000017 -0.000009 0.000000
+v 0.000017 403.101553 134.560669
+v 0.000017 -0.000009 134.560730
+vt 0.333813 0.000000
+vt 0.333813 1.000000
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+vn -1.000000 0.000000 0.000000
+vn -1.000000 0.000000 0.000000
+vn -1.000000 0.000000 0.000000
+vn -1.000000 0.000000 0.000000
+s off
+g polySurface269 polySurface266 Cellules1
+usemtl surfaceShader1SG
+f 4/1/1 3/2/2 1/3/3 2/4/4

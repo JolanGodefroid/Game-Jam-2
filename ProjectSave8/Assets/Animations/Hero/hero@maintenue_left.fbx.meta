@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: c31bad3c3291f514b98e2c68173c3e5c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Body_ctrl
+    100002: Body_rst
+    100004: controllers_const_grp
+    100006: controllers_const_grp 1
+    100008: controllers_const_grp 2
+    100010: controllers_const_grp 3
+    100012: controllers_const_grp 4
+    100014: controllers_const_grp 5
+    100016: controllers_fk_const_grp
+    100018: controllers_ik_const_grp
+    100020: fingers_ctrl
+    100022: fingers_ctrl 1
+    100024: fingers_rst
+    100026: fingers_rst 1
+    100028: Head_ik_ctrl
+    100030: Head_ik_rst
+    100032: Head_neck_space_loc
+    100034: //RootNode
+    100036: Hips_ctrl
+    100038: Hips_rst
+    100040: ikHandle1
+    100042: LeftArm_pole_ctrl
+    100044: LeftArm_pole_rst
+    100046: LeftArm_settings_ctrl
+    100048: LeftArm_settings_rst
+    100050: LeftArmLength_hand_locator
+    100052: LeftHand_ik_ctrl
+    100054: LeftHand_ik_handle
+    100056: LeftHand_ik_rst
+    100058: LeftKnee_ctrl
+    100060: LeftKnee_rst
+    100062: LeftLowerLeg_Knee_locator
+    100064: LeftShoulder_ctrl
+    100066: LeftShoulder_fk_rst
+    100068: LeftUpperLeg_Knee_locator
+    100070: MiddlePants_ctrl
+    100072: MiddlePants_rst
+    100074: Neck_fk_ctrl
+    100076: Neck_fk_rest
+    100078: NeckLength_Head_locator
+    100080: pants_grp
+    100082: rig_grp
+    100084: rig_head_grp
+    100086: rig_LeftArm_grp
+    100088: rig_LeftLeg_grp
+    100090: rig_LeftShoulder_grp
+    100092: rig_legsExtra_grp
+    100094: rig_RightArm_grp
+    100096: rig_RightLeg_grp
+    100098: rig_RightShoulder_grp
+    100100: rig_root_grp
+    100102: rig_spine_grp
+    100104: RightArm_fk_ctrl
+    100106: RightArm_fk_rst
+    100108: RightArm_settings_ctrl
+    100110: RightArm_settings_rst
+    100112: RightForeArm_fk_ctrl
+    100114: RightHand_fk_ctrl
+    100116: RightKnee_ctrl
+    100118: RightKnee_rst
+    100120: RightLowerLeg_Knee_locator
+    100122: RightShoulder_ctrl
+    100124: RightShoulder_fk_rst
+    100126: RightUpperLeg_Knee_locator
+    100128: Root_ctrl
+    100130: Spine1_ctrl
+    100132: Spine1_rst
+    100134: Spine2_ctrl
+    100136: Spine2_rst
+    100138: World_ctrl
+    400000: Body_ctrl
+    400002: Body_rst
+    400004: controllers_const_grp
+    400006: controllers_const_grp 1
+    400008: controllers_const_grp 2
+    400010: controllers_const_grp 3
+    400012: controllers_const_grp 4
+    400014: controllers_const_grp 5
+    400016: controllers_fk_const_grp
+    400018: controllers_ik_const_grp
+    400020: fingers_ctrl
+    400022: fingers_ctrl 1
+    400024: fingers_rst
+    400026: fingers_rst 1
+    400028: Head_ik_ctrl
+    400030: Head_ik_rst
+    400032: Head_neck_space_loc
+    400034: //RootNode
+    400036: Hips_ctrl
+    400038: Hips_rst
+    400040: ikHandle1
+    400042: LeftArm_pole_ctrl
+    400044: LeftArm_pole_rst
+    400046: LeftArm_settings_ctrl
+    400048: LeftArm_settings_rst
+    400050: LeftArmLength_hand_locator
+    400052: LeftHand_ik_ctrl
+    400054: LeftHand_ik_handle
+    400056: LeftHand_ik_rst
+    400058: LeftKnee_ctrl
+    400060: LeftKnee_rst
+    400062: LeftLowerLeg_Knee_locator
+    400064: LeftShoulder_ctrl
+    400066: LeftShoulder_fk_rst
+    400068: LeftUpperLeg_Knee_locator
+    400070: MiddlePants_ctrl
+    400072: MiddlePants_rst
+    400074: Neck_fk_ctrl
+    400076: Neck_fk_rest
+    400078: NeckLength_Head_locator
+    400080: pants_grp
+    400082: rig_grp
+    400084: rig_head_grp
+    400086: rig_LeftArm_grp
+    400088: rig_LeftLeg_grp
+    400090: rig_LeftShoulder_grp
+    400092: rig_legsExtra_grp
+    400094: rig_RightArm_grp
+    400096: rig_RightLeg_grp
+    400098: rig_RightShoulder_grp
+    400100: rig_root_grp
+    400102: rig_spine_grp
+    400104: RightArm_fk_ctrl
+    400106: RightArm_fk_rst
+    400108: RightArm_settings_ctrl
+    400110: RightArm_settings_rst
+    400112: RightForeArm_fk_ctrl
+    400114: RightHand_fk_ctrl
+    400116: RightKnee_ctrl
+    400118: RightKnee_rst
+    400120: RightLowerLeg_Knee_locator
+    400122: RightShoulder_ctrl
+    400124: RightShoulder_fk_rst
+    400126: RightUpperLeg_Knee_locator
+    400128: Root_ctrl
+    400130: Spine1_ctrl
+    400132: Spine1_rst
+    400134: Spine2_ctrl
+    400136: Spine2_rst
+    400138: World_ctrl
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

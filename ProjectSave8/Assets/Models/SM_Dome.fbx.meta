@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 0049bc6b1979da14ab60a4b6f41d4a46
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bloc_low
+    100002: Contourporte_low
+    100004: Contourporte_low 1
+    100006: Contourporte_low 2
+    100008: Couloir_low
+    100010: Couloir_low2
+    100012: Couloir_low3
+    100014: Dome_low
+    100016: DomeDetails_low
+    100018: Mur_low
+    100020: Mur_low 1
+    100022: Mur_low 2
+    100024: Mur_low1
+    100026: Mur_low1 1
+    100028: Mur_low1 2
+    100030: NeonBleu_low
+    100032: NeonOrange_low
+    100034: Plaqueporte_low
+    100036: Plaqueporte_low 1
+    100038: Plaqueporte_low 2
+    100040: PoteauMur_low
+    100042: PoteauMur_low 1
+    100044: PoteauMur_low 2
+    100046: //RootNode
+    100048: Sol_low
+    100050: Sol_low 1
+    100052: Sol_low 2
+    100054: Solbout_low
+    100056: Solbout_low 1
+    100058: Solbout_low 2
+    400000: Bloc_low
+    400002: Contourporte_low
+    400004: Contourporte_low 1
+    400006: Contourporte_low 2
+    400008: Couloir_low
+    400010: Couloir_low2
+    400012: Couloir_low3
+    400014: Dome_low
+    400016: DomeDetails_low
+    400018: Mur_low
+    400020: Mur_low 1
+    400022: Mur_low 2
+    400024: Mur_low1
+    400026: Mur_low1 1
+    400028: Mur_low1 2
+    400030: NeonBleu_low
+    400032: NeonOrange_low
+    400034: Plaqueporte_low
+    400036: Plaqueporte_low 1
+    400038: Plaqueporte_low 2
+    400040: PoteauMur_low
+    400042: PoteauMur_low 1
+    400044: PoteauMur_low 2
+    400046: //RootNode
+    400048: Sol_low
+    400050: Sol_low 1
+    400052: Sol_low 2
+    400054: Solbout_low
+    400056: Solbout_low 1
+    400058: Solbout_low 2
+    2100000: Bloc
+    2100002: Domedetails
+    2100004: Wall
+    2100006: EmiRed
+    2100008: EmiBlue
+    2100010: Couloir
+    2300000: Bloc_low
+    2300002: Contourporte_low
+    2300004: Contourporte_low 1
+    2300006: Contourporte_low 2
+    2300008: Dome_low
+    2300010: DomeDetails_low
+    2300012: Mur_low
+    2300014: Mur_low 1
+    2300016: Mur_low 2
+    2300018: Mur_low1
+    2300020: Mur_low1 1
+    2300022: Mur_low1 2
+    2300024: NeonBleu_low
+    2300026: NeonOrange_low
+    2300028: Plaqueporte_low
+    2300030: Plaqueporte_low 1
+    2300032: Plaqueporte_low 2
+    2300034: PoteauMur_low
+    2300036: PoteauMur_low 1
+    2300038: PoteauMur_low 2
+    2300040: Sol_low
+    2300042: Sol_low 1
+    2300044: Sol_low 2
+    2300046: Solbout_low
+    2300048: Solbout_low 1
+    2300050: Solbout_low 2
+    3300000: Bloc_low
+    3300002: Contourporte_low
+    3300004: Contourporte_low 1
+    3300006: Contourporte_low 2
+    3300008: Dome_low
+    3300010: DomeDetails_low
+    3300012: Mur_low
+    3300014: Mur_low 1
+    3300016: Mur_low 2
+    3300018: Mur_low1
+    3300020: Mur_low1 1
+    3300022: Mur_low1 2
+    3300024: NeonBleu_low
+    3300026: NeonOrange_low
+    3300028: Plaqueporte_low
+    3300030: Plaqueporte_low 1
+    3300032: Plaqueporte_low 2
+    3300034: PoteauMur_low
+    3300036: PoteauMur_low 1
+    3300038: PoteauMur_low 2
+    3300040: Sol_low
+    3300042: Sol_low 1
+    3300044: Sol_low 2
+    3300046: Solbout_low
+    3300048: Solbout_low 1
+    3300050: Solbout_low 2
+    4300000: Bloc_low
+    4300002: DomeDetails_low
+    4300004: Dome_low
+    4300006: NeonOrange_low
+    4300008: NeonBleu_low
+    4300010: PoteauMur_low
+    4300012: Mur_low
+    4300014: Plaqueporte_low
+    4300016: Contourporte_low
+    4300018: Sol_low
+    4300020: Solbout_low
+    4300022: Mur_low1
+    4300024: PoteauMur_low
+    4300026: Mur_low
+    4300028: Plaqueporte_low
+    4300030: Contourporte_low
+    4300032: Sol_low
+    4300034: Solbout_low
+    4300036: Mur_low1
+    4300038: PoteauMur_low
+    4300040: Mur_low
+    4300042: Plaqueporte_low
+    4300044: Contourporte_low
+    4300046: Sol_low
+    4300048: Solbout_low
+    4300050: Mur_low1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
