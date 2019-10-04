@@ -117,7 +117,7 @@ public class PlatformRepulsor : MonoBehaviour
 		{
 			case Possibilities.Platform_Platform :
 
-				MovePlatforms();
+				MovePlatform();
 
 				break;
 
@@ -171,6 +171,7 @@ public class PlatformRepulsor : MonoBehaviour
 
 		switch(currentPossibility)
 		{
+			case Possibilities.Platform_Platform :
 			case Possibilities.Platform_Pillar :
 				
 				StartPosition = Objects[0].transform.position;
