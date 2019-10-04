@@ -6,7 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class LevelManager : MonoBehaviour
 {
 	public PostProcessProfile profile;
-	public GameObject[] LevelsPrefabs = new GameObject[5];
+	public GameObject[] LevelsPrefabs = new GameObject[4];
 	public Transform Player;
 
 	private GameObject[] Levels = new GameObject[5];
@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
 		Player.rotation = Checkpoints[currentLevel].rotation;
 
 		EnableDisableLevels();
+		PlayerControl.Current.ResetView();
 	}
 
 	public void EnableDisableLevels()
