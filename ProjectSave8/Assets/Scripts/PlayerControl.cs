@@ -17,6 +17,8 @@ public class PlayerControl : MonoBehaviour
 	public GameObject[] PowerIcons = new GameObject[2];
 	public GameObject PlateformRepulsor;
 	public Animator animator;
+	public GameObject audioSourcePrefab;
+	public AudioClip[] sounds;
 
 	[Header("Control")]
     [Range(0f, 300f)] public float MouseSensitivity = 150f;
@@ -147,7 +149,7 @@ public class PlayerControl : MonoBehaviour
 		{
 			LeftClic = true;
 			CanMove = false;
-			SetAnimator(false, false, true);
+			SetAnimator(false, false, false, false, true);
 		}
 		else
 		{
@@ -156,15 +158,27 @@ public class PlayerControl : MonoBehaviour
 
 			if(Input.GetKey(KeyCode.Mouse1) && !LeftClic)
 			{
-				SetAnimator(false, true, false);
+				SetAnimator(false, false, false, true, false);
 				RightClic = true;
 				CanMove = false;
 			}
 			else
 			{
-				SetAnimator(true, false, false);
 				RightClic = false;
 				CanMove = true;
+
+				if(Input.GetKeyDown(KeyCode.LeftShift))
+				{
+					SetAnimator(false, false, true, false, false);
+				}
+				else if(Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0f)
+				{
+					SetAnimator(false, true, false, false, false);
+				}
+				else
+				{
+					SetAnimator(true, false, false, false, false);
+				}
 			}
 		}
 		
@@ -380,9 +394,11 @@ public class PlayerControl : MonoBehaviour
 		}
 	}
 
-	private void SetAnimator(bool CanIdle, bool RightClic, bool LeftClic)
+	private void SetAnimator(bool CanIdle, bool CanWalk, bool CanRun, bool RightClic, bool LeftClic)
 	{
 		animator.SetBool("CanIdle", CanIdle);
+		//animator.SetBool("CanWalk", LeftClic);
+		//animator.SetBool("CanRun", LeftClic);
 		animator.SetBool("RightClic", RightClic);
 		animator.SetBool("LeftClic", LeftClic);
 	}
@@ -452,5 +468,25 @@ public class PlayerControl : MonoBehaviour
 
 			yield return null;
 		}
+	}
+
+	private void PlaySound(int SoundNum, bool UseRandomPitch)
+	{
+		GameObject AudioPrefabInstance = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
+		AudioSource audioSource = AudioPrefabInstance.GetComponent<AudioSource>();
+		audioSource.clip = sounds[SoundNum];
+
+		if(UseRandomPitch)
+		{
+			audioSource.pitch = Random.Range(0.9f, 1.1f);
+		}
+		else
+		{
+			audioSource.pitch = 1f;
+		}
+
+		audioSource.Play();
+
+		Destroy(AudioPrefabInstance, 5f);
 	}
 }

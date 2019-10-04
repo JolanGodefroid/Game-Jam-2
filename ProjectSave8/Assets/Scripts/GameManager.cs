@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 	public GameState currentGameState = GameState.InGame;
 
 	private ColorGrading colorGrading;
+	private AudioSource audioSource;
 
 	void Awake ()
     {
@@ -54,6 +55,8 @@ public class GameManager : MonoBehaviour
 		
 		OptionsCanvas.SetActive(false);
 		MenuCanvas.SetActive(false);
+
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void Update()
@@ -174,5 +177,15 @@ public class GameManager : MonoBehaviour
 	{
 		MenuCanvas.SetActive(true);
 		OptionsCanvas.SetActive(false);
+	}
+
+	IEnumerator PlayPushLines()
+	{
+		while(true)
+		{
+			yield return new WaitForSeconds(Random.Range(30f, 60f));
+
+			audioSource.clip = PushLines[Random.Range(0, PushLines.Length)];
+		}
 	}
 }
