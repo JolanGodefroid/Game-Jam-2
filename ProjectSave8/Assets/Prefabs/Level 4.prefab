@@ -48,7 +48,7 @@ Light:
   m_SpotAngle: 94.85342
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -65,7 +65,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 1
+  strength: 0.1
   scatteringBias: 0
   useColorTemperatureTint: 0
   overrideColor: 0
@@ -407,6 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2451121774086683098}
   - component: {fileID: 4798497582783747323}
+  - component: {fileID: 6600823442940730521}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -444,7 +445,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -466,6 +467,38 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &6600823442940730521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176759619104868736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0.1
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 0
+  overridingColor: {r: 1, g: 1, b: 1, a: 1}
+  useShadow: 1
+  shadowMapRenderTexture: {fileID: 0}
+  useCookie: 1
+  cookieMapRenderTexture: {fileID: 0}
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  shadowDataRenderTexture: {fileID: 0}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
 --- !u!64 &6811248933754654155
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -784,6 +817,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5064389794759990445}
     m_Modifications:
+    - target: {fileID: 8462837145652486527, guid: 3d3ae09e8fb38bb4597739bf0a12fbc8,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathArea
+      objectReference: {fileID: 0}
     - target: {fileID: 4697029008026337200, guid: 3d3ae09e8fb38bb4597739bf0a12fbc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -838,11 +876,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8462837145652486527, guid: 3d3ae09e8fb38bb4597739bf0a12fbc8,
-        type: 3}
-      propertyPath: m_Name
-      value: DeathArea
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3ae09e8fb38bb4597739bf0a12fbc8, type: 3}
@@ -929,15 +962,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd60568afc2b4f48af424dc9f693b46, type: 3}
---- !u!1 &3406830363847610586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: bfd60568afc2b4f48af424dc9f693b46,
-    type: 3}
-  m_PrefabInstance: {fileID: 3406830363847644794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3406830363847249146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bfd60568afc2b4f48af424dc9f693b46,
+    type: 3}
+  m_PrefabInstance: {fileID: 3406830363847644794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3406830363847610586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bfd60568afc2b4f48af424dc9f693b46,
     type: 3}
   m_PrefabInstance: {fileID: 3406830363847644794}
   m_PrefabAsset: {fileID: 0}
@@ -2093,15 +2126,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0961a048e64ad424f9155c0c57eefeef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1061c331b23664d9f8b7fbb4686b5f, type: 3}
---- !u!1 &8017321632151725822 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: fe1061c331b23664d9f8b7fbb4686b5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8017321632151691358}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8017321632151567070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fe1061c331b23664d9f8b7fbb4686b5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8017321632151691358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8017321632151725822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fe1061c331b23664d9f8b7fbb4686b5f,
     type: 3}
   m_PrefabInstance: {fileID: 8017321632151691358}
   m_PrefabAsset: {fileID: 0}
