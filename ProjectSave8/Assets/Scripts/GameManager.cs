@@ -183,7 +183,7 @@ public class GameManager : MonoBehaviour
 	{
 		while(true)
 		{
-			yield return new WaitForSeconds(Random.Range(30f, 60f));
+			yield return new WaitForSeconds(Random.Range(5f, 15f));
 
 			audioSource.clip = PushLines[Random.Range(0, PushLines.Length)];
 		}
