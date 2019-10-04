@@ -261,7 +261,7 @@ public class PlayerControl : MonoBehaviour
 			yAxisClamp = 90f;
 			MouseY = 0f;
 		}
-		else if(yAxisClamp < -90f)
+		if(yAxisClamp < -90f)
 		{
 			yAxisClamp = -90f;
 			MouseY = 0f;
@@ -312,21 +312,21 @@ public class PlayerControl : MonoBehaviour
 
 							if(Vector3.Distance(transform.position, TargetedPlatform.transform.position) > MinimalAttractionDistance)
 							{
-								Physics.Raycast(PlateformTransform.position, (transform.position - PlateformTransform.position).normalized, out raycastHit, 50f, layerMask);
-								StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (transform.position - PlateformTransform.position).normalized, TargetedPlatform));
+								Physics.Raycast(PlateformTransform.position, (transform.position - PlateformTransform.position).normalized, out raycastHit, 100f, layerMask);
+								StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (transform.position - PlateformTransform.position).normalized, TargetedPlatform, "LeftClic"));
 							}
 
 							break;
 
 						case Plateform.Charge.Positive :
 
-							Physics.Raycast(PlateformTransform.position, (PlateformTransform.position - transform.position).normalized, out raycastHit, 50f, layerMask);
-							StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (PlateformTransform.position - transform.position).normalized, TargetedPlatform));
+							Physics.Raycast(PlateformTransform.position, (PlateformTransform.position - transform.position).normalized, out raycastHit, 100f, layerMask);
+							StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (PlateformTransform.position - transform.position).normalized, TargetedPlatform, "LeftClic"));
 
 							break;
 					}
 				}
-				else if(RightClic) //LeftHand - Negative
+				if(RightClic) //LeftHand - Negative
 				{
 					PlateformScript = TargetedPlatform.GetComponent<Plateform>();
 					PlateformTransform = TargetedPlatform.transform;
@@ -337,8 +337,8 @@ public class PlayerControl : MonoBehaviour
 					{
 						case Plateform.Charge.Negative :
 
-							Physics.Raycast(PlateformTransform.position, (PlateformTransform.position - transform.position).normalized, out raycastHit, 50f, layerMask);
-							StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (PlateformTransform.position - transform.position).normalized, TargetedPlatform));
+							Physics.Raycast(PlateformTransform.position, (PlateformTransform.position - transform.position).normalized, out raycastHit, 100f, layerMask);
+							StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (PlateformTransform.position - transform.position).normalized, TargetedPlatform, "RightClic"));
 
 							break;
 
@@ -346,8 +346,8 @@ public class PlayerControl : MonoBehaviour
 
 							if(Vector3.Distance(transform.position, TargetedPlatform.transform.position) > MinimalAttractionDistance)
 							{
-								Physics.Raycast(PlateformTransform.position, (transform.position - PlateformTransform.position).normalized, out raycastHit, 50f, layerMask);
-								StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (transform.position - PlateformTransform.position).normalized, TargetedPlatform));
+								Physics.Raycast(PlateformTransform.position, (transform.position - PlateformTransform.position).normalized, out raycastHit, 100f, layerMask);
+								StartCoroutine(MovePlatform(PlateformTransform.position, raycastHit.point - (transform.position - PlateformTransform.position).normalized, TargetedPlatform, "RightClic"));
 							}
 
 							break;
@@ -358,6 +358,27 @@ public class PlayerControl : MonoBehaviour
 
 		#endregion
 	}
+	IEnumerator MovePlatform(Vector3 StartPosition, Vector3 EndPosition, GameObject Platform, string Clic)
+	{
+		if(Clic == "RightClic")
+		{
+			while(Vector3.Distance(Platform.transform.position, EndPosition) > 1f && Input.GetKey(KeyCode.Mouse1))
+			{
+				Platform.transform.position += (EndPosition - StartPosition).normalized * PlatformSpeed * Time.deltaTime;
+
+				yield return null;
+			}
+		}
+		if(Clic == "LeftClic")
+		{
+			while(Vector3.Distance(Platform.transform.position, EndPosition) > 1f && Input.GetKey(KeyCode.Mouse0))
+			{
+				Platform.transform.position += (EndPosition - StartPosition).normalized * PlatformSpeed * Time.deltaTime;
+
+				yield return null;
+			}
+		}
+	}
 
 	private void SetAnimator(bool CanIdle, bool RightClic, bool LeftClic)
 	{
@@ -366,15 +387,6 @@ public class PlayerControl : MonoBehaviour
 		animator.SetBool("LeftClic", LeftClic);
 	}
 
-	IEnumerator MovePlatform(Vector3 StartPosition, Vector3 EndPosition, GameObject Platform)
-	{
-		while(Vector3.Distance(Platform.transform.position, EndPosition) > 1f)
-		{
-			Platform.transform.position += (EndPosition - StartPosition).normalized * PlatformSpeed * Time.deltaTime;
-
-			yield return null;
-		}
-	}
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -417,8 +429,8 @@ public class PlayerControl : MonoBehaviour
 
 	public void ResetView()
 	{
-		MouseX = 0f;
-		MouseY = 0f;
+		//MouseX = 0f;
+		//MouseY = 0f;
 		CameraTransform.Rotate(Vector3.zero);
 		yAxisClamp = 0f;
 	}

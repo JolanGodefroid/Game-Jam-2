@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
 		Player.rotation = Checkpoints[currentLevel].rotation;
 
 		EnableDisableLevels();
+		PlayerControl.Current.ResetView();
 	}
 
 	public void EnableDisableLevels()

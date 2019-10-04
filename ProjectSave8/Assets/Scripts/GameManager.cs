@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 	public Slider GammeSlider;
 	public Slider MasterVolumeSlider;
 	public PostProcessProfile profile;
+	public AudioClip[] PushLines;
 
 	private static GameManager current;
 	public static GameManager Current
