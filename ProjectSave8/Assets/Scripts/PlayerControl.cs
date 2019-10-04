@@ -167,21 +167,24 @@ public class PlayerControl : MonoBehaviour
 				RightClic = false;
 				CanMove = true;
 
-				if(Input.GetKeyDown(KeyCode.LeftShift))
-				{
-					SetAnimator(false, false, true, false, false);
-				}
-				else if(Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0f)
-				{
-					SetAnimator(false, true, false, false, false);
-				}
-				else
-				{
-					SetAnimator(true, false, false, false, false);
-				}
 			}
 		}
 		
+		if(!RightClic && !LeftClic)
+		{
+			if(Input.GetKey(KeyCode.LeftShift))
+			{
+				SetAnimator(false, false, true, false, false);
+			}
+			else if(Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0f)
+			{
+				SetAnimator(false, true, false, false, false);
+			}
+			else
+			{
+				SetAnimator(true, false, false, false, false);
+			}
+		}
 
 		if(Input.GetKeyDown(KeyCode.A))
 		{
@@ -397,8 +400,8 @@ public class PlayerControl : MonoBehaviour
 	private void SetAnimator(bool CanIdle, bool CanWalk, bool CanRun, bool RightClic, bool LeftClic)
 	{
 		animator.SetBool("CanIdle", CanIdle);
-		//animator.SetBool("CanWalk", LeftClic);
-		//animator.SetBool("CanRun", LeftClic);
+		animator.SetBool("CanWalk", CanWalk);
+		animator.SetBool("CanRun", CanRun);
 		animator.SetBool("RightClic", RightClic);
 		animator.SetBool("LeftClic", LeftClic);
 	}

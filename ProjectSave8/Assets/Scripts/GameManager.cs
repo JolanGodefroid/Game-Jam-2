@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
 		MenuCanvas.SetActive(false);
 
 		audioSource = GetComponent<AudioSource>();
+		StartCoroutine(PlayPushLines());
 	}
 
 	private void Update()
@@ -183,7 +184,7 @@ public class GameManager : MonoBehaviour
 	{
 		while(true)
 		{
-			yield return new WaitForSeconds(Random.Range(5f, 15f));
+			yield return new WaitForSeconds(Random.Range(30f, 60f));
 
 			audioSource.clip = PushLines[Random.Range(0, PushLines.Length)];
 		}
